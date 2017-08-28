@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "elm-make ./src/Main.elm --output=dist/bundle.js --warn && uglifyjs --config-file minify.json dist/bundle.js -o dist/bundle.min.js",
+    "server": "elm-reactor -a $IP -p $PORT",
+    "format": "elm-format src/ --yes",
+    "lint": "elm-format src/ --validate"
+  },
+  "devDependencies": {
+    "elm": "^0.18.0",
+    "elm-format": "^0.6.1-alpha",
+    "uglify-js": "^3.0.28"
+  }
+}
