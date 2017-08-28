@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "elm-make ./src/Main.elm --output=index.html --warn",
+    "server": "elm-reactor -a $IP -p $PORT",
+    "format": "elm-format src/ --yes",
+    "lint": "elm-format src/ --validate"
+  },
+  "devDependencies": {
+    "elm": "^0.18.0",
+    "elm-format": "^0.6.1-alpha"
+  }
+}
